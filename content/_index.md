@@ -27,7 +27,7 @@ Formerly zLib, this is our biggest library, by far. Inside, you'll fine composan
 - workers, for any background tasks your plugin may need;
 - and lots more.
 
-You'll get each one of these features **whthout having to ask your users to install a separate lib plugin**, thanks to the magic of Maven shading. Also, only the parts you actually use remain in your plugin JAR at the end, even if QuartzLib as a whole is quite huge.
+You'll get each one of these features **without having to ask your users to install a separate lib plugin**, thanks to the magic of Maven shading. Also, only the parts you actually use remain in your plugin JAR at the end, even if QuartzLib as a whole is quite huge.
 
 [**» See all features and how to use it**](/quartzlib)
 
