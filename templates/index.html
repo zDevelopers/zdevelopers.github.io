@@ -1,0 +1,45 @@
+{% extends "juice/templates/index.html" %}
+
+{% block title %}zDevelopers{% endblock title %}
+
+{% block hero %}
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<section class="text-center">
+    <h1 class="heading-text" style="font-size: 50px">
+        zDevelopers plugins and libraries
+    </h1>
+    <h3 class="title-text">
+        For players, we create Minecraft plugins. For developers, we share our powerful tools to write them.
+    </h3>
+    <div>The home of ImageOnMap, QuartzLib, and more!</div>
+</section>
+
+<img class="hero-image" style="width: 50%" src="{{ get_url(path="logo.png") }}" />
+
+<div class="explore-more text"
+    onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+    Explore all our tools and plugins ⇩
+</div>
+<style>
+    .hero section {
+        padding: 0 5rem;
+    }
+    @media screen and (max-width: 768px) {
+        .hero section {
+            padding: 0 2rem;
+        }
+
+        .hero-image {
+            display: none
+        }
+    }
+</style>
+{% endblock hero %}
+
+{% block footer %}
+<footer>
+    <small class="subtext">
+        <a href="https://dev.zcraft.fr">zDevelopers</a> &middot; Creative Commons BY-SA, 2015 – {{ now() | date(format="%Y") }} &middot; Built using <a href="https://www.getzola.org">Zola</a> and <a href="https://github.com/huhu/juice">Juice</a>.
+    </small>
+</footer>
+{% endblock footer %}
