@@ -2,7 +2,7 @@
 title = "zDevelopers ⋅ Minecraft plugins and libraries"
 +++
 
-We started making Minecraft plugins for [an old French Minecraft community](https://zcraft.fr). Over the years, we accumulated projets and tools to create them easily.
+We've been making Minecraft plugins for [a ten-years-old old French Minecraft community](https://zcraft.fr). Over time, we accumulated projets, and tools to create them easily.
 
 Everything we created is published under an open-source licence, usually CeCILL-B (BSD-style in French law), and totally **free to use**.
 
