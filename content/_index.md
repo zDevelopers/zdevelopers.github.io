@@ -2,7 +2,7 @@
 title = "zDevelopers ⋅ Minecraft plugins and libraries"
 +++
 
-We've been making Minecraft plugins for [a ten-years-old old French Minecraft community](https://zcraft.fr). Over time, we accumulated projets, and tools to create them easily.
+We've been making Minecraft plugins for [a ten-years-old old French community](https://zcraft.fr). Over time, we accumulated projets, and tools to create them easily.
 
 Everything we created is published under an open-source licence, usually CeCILL-B (BSD-style in French law), and totally **free to use**.
 
@@ -16,7 +16,7 @@ To share code between plugins, we created some libraries for Bukkit plugins deve
 
 ## QuartzLib
 
-Formerly zLib, this is our main library, by far. Inside, you'll fine composants to handle common Minecraft plugins patterns, like:
+Formerly zLib, this is our biggest library, by far. Inside, you'll fine composants to handle common Minecraft plugins patterns, like:
 
 - powerful and typed configuration module;
 - easier to use commands module;
@@ -26,6 +26,8 @@ Formerly zLib, this is our main library, by far. Inside, you'll fine composants 
 - scoreboards;
 - workers, for any background tasks your plugin may need;
 - and lots more.
+
+You'll get each one of these features **whthout having to ask your users to install a separate lib plugin**, thanks to the magic of Maven shading. Also, only the parts you actually use remain in your plugin JAR at the end, even if QuartzLib as a whole is quite huge.
 
 [**» See all features and how to use it**](/quartzlib)
 
