@@ -130,9 +130,3 @@ public void onLoad()
     // Your code, placed after.
 }
 ```
-
-# Features
-
-blabla
-
-# Contributing
