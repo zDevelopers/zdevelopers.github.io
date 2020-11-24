@@ -1,6 +1,9 @@
 +++
 title = "FAQ | ImageOnMap"
 description = "ImageOnMap frequently asked questions"
+
+[extra]
+menu_title = "Frequently Asked Questions"
 +++
 
 Answers to frequently asked questions. Please check these before asking on Discord, Spigot, GitHub, or others!

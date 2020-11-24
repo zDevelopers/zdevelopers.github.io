@@ -5,12 +5,8 @@ description = "Commands"
 
 This component simplifies the management of commands with sub-commands and aliases.
 
-<table>
-<tr><td style="width: 50%;"><strong>Documentation</strong></td><td><a href="http://jenkins.carrade.eu/job/zLib/javadoc/index.html?fr/zcraft/zlib/components/commands/package-summary.html">JavaDoc</a></td></tr>
-<tr><td style="width: 50%;"><strong>Loader class</strong> <small>(for <code>loadComponents</code>)</small></td><td><a href="http://jenkins.carrade.eu/job/zLib/javadoc/index.html?fr/zcraft/zlib/components/commands/Commands.html"><code>fr.zcraft.quartzlib.components.commands.Commands</code></a></td></tr>
-</table>
+{{ component(doc="https://dev.zcraft.fr/docs/quartzlib/index.html?fr/zcraft/quartzlib/components/commands/package-summary.html", loader="<code>fr.zcraft.quartzlib.components.commands.Commands</code>") }}
 
- 
 
 # Writing commands
 

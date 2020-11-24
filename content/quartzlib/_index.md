@@ -1,6 +1,14 @@
 +++
 title = "QuartzLib"
 description = "QuartzLib"
+insert_anchor_links = "right"
+
+[extra]
+repo = "https://github.com/zDevelopers/QuartzLib"
+links = [
+    { title = "Javadoc", url = "/docs/quartzlib" },
+    { title = "Spigot", url = "https://www.spigotmc.org/resources/quartzlib.32310/" }
+]
 +++
 
 QuartzLib (formerly zLib) is a helper library for Bukkit plugins development, providing useful tools for small and big tasks, to fill the gaps of the Bukkit API.
@@ -122,3 +130,9 @@ public void onLoad()
     // Your code, placed after.
 }
 ```
+
+# Features
+
+blabla
+
+# Contributing

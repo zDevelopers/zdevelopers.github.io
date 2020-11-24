@@ -15,7 +15,10 @@ theme = "juice"
 
 [extra]
 juice_extra_menu = [
-  {title = "GitHub", link = "https://github.com/zDevelopers"},
+  { title = "Plugins", link = "/#bukkit-plugins" },
+  { title = "Libraries", link = "/#libraries-for-developers" },
+  { title = "Support", link = "/support" },
+  { title = "GitHub", link = "https://github.com/zDevelopers", hover = "GitHub organization", icon = "github" },
 ]
 juice_logo_name = "zDevelopers"
 juice_logo_path = "logo.png"

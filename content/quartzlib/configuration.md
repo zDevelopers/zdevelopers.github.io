@@ -5,10 +5,7 @@ description = "Configuration"
 
 This component centralizes the configuration of your application, providing simple access and automatic parsing.
 
-<dl class="summary">
-<dt><strong>Documentation</strong></dt><dd><a href="https://zdevelopers.github.io/QuartzLib/index.html?fr/zcraft/quartzlib/components/configuration/package-summary.html">JavaDoc</a></dd>
-<dt><strong>Loader class</strong> <small>(for <code>loadComponents</code>)</small></dt><dd><em>Your configuration class (see below)</em></dd>
-</dl>
+{{ component(doc="https://dev.zcraft.fr/docs/quartzlib/index.html?fr/zcraft/quartzlib/components/configuration/package-summary.html", loader="<em>Your configuration class (see below)</em>") }}
 
 # The concept
 
