@@ -8,12 +8,15 @@
 </a>
 
 <nav>
-    {% for page in section.pages %}
-    <a class="nav-item subtitle-text" href="{{ page.permalink }}">{{ page.title }}</a>
-    {% endfor %}
     {% if config.extra.juice_extra_menu %}
         {% for menu in config.extra.juice_extra_menu %}
-        <a class="nav-item subtitle-text" href="{{ menu.link }}">{{ menu.title }}</a>
+        <a class="nav-item subtitle-text" href="{{ menu.link }}" title="{{ menu.hover | default(value="") }}">
+            {%  if menu.icon and menu.icon == "github" %}
+                {%  include "icons/github.svg.html" %}
+            {% else %}
+                {{ menu.title }}
+            {% endif %}
+        </a>
         {% endfor %}
     {% endif %}
 </nav>

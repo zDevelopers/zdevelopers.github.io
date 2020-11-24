@@ -1,0 +1,26 @@
+a.nav-button {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.3rem;
+  transition: color .2s ease-in-out;
+
+  svg {
+    fill: var(--primary-color);
+    transition: transform .2s ease-in-out;
+  }
+
+  span {
+    display: inline-block;
+    margin-left: .8rem;
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: none !important;
+
+    svg {
+      transform: translateX(.4rem);
+    }
+  }
+}

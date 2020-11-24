@@ -1,15 +1,21 @@
 {% import "_macros.html" as macros %}
+{% import "_project.html" as project %}
+
 {% extends "index.html" %}
 
 {% block title %}{{ page.title }} | {{ super() }} {% endblock title %}
 
 {% block header %}
-<header class="box-shadow">
+<header class="main box-shadow">
     {{ macros::render_header() }}
 </header>
 {% endblock header %}
 
+{% block above_toc %}
+    {{ project::render_project(section=get_section(path=page.ancestors | last), current_page=page) }}
+{%  endblock %}
+
 {% block content %}
-<div class="heading-text">{{ page.description }}</div>
-{{ page.content | safe }}
+    <div class="heading-text">{{ page.description }}</div>
+    {{ page.content | safe }}
 {% endblock content %}

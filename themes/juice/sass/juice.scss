@@ -1,7 +1,9 @@
 @import "variables";
-@import "_ultility.scss";
-@import "_text.scss";
-@import "_markdown.scss";
+@import "ultility";
+@import "button";
+@import "project";
+@import "text";
+@import "markdown";
 
 body {
   padding: 0;
@@ -12,6 +14,11 @@ body {
 
 a {
   text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+svg {
+  transition: fill .2s ease-in-out;
 }
 
 ul {
@@ -27,38 +34,46 @@ p > img {
   height: auto;
 }
 
-header {
+header.main {
   background-color: var(--primary-color);
   color: black;
   padding: 20px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
 
-.logo {
-  font-family: "Alfa Slab One", serif;
-  font-size: 32px;
-  color: var(--primary-text-color);
-  display: flex;
-  align-items: center;
-  margin: 0 40px;
+  .logo {
+    font-family: "Alfa Slab One", serif;
+    font-size: 32px;
+    color: var(--primary-text-color);
+    display: flex;
+    align-items: center;
+    margin: 0 40px;
 
-  img {
-    width: 60px;
-    margin: 0 25px;
+    img {
+      width: 60px;
+      margin: 0 25px;
+    }
   }
-}
 
-.nav-item {
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
+  .nav-item {
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
 
-  &:hover {
-    color: var(--secondary-color);
-    text-decoration: underline;
+    svg {
+      fill: var(--primary-text-color);
+    }
+
+    &:hover {
+      color: var(--secondary-color);
+      text-decoration: none;
+
+      svg {
+        fill: var(--secondary-color);
+      }
+    }
   }
 }
 
@@ -86,13 +101,13 @@ header {
   }
 }
 
-header, .hero {
+header.main, .hero {
   .heading-text, h1, .title-text, h2, .subtitle-text, .text {
     color: var(--primary-text-color);
   }
 }
 
-header nav .nav-item:hover {
+nav .nav-item:hover {
   color: var(--secondary-color);
 }
 
@@ -100,47 +115,53 @@ main {
   display: flex;
   padding: 50px 100px;
 
-  .toc {
+  aside {
     max-width: 260px;
     min-width: 240px;
-  }
 
-  .toc-item {
-    padding: 10px 20px;
-    color: #424242;
-  }
+    position: relative;
 
-  .toc-item a, .toc-item-child a {
-    color: var(--secondary-text-color);
+    .aside-section {
+      padding: .8rem 1rem;
+      border-top: 5px solid var(--primary-color);
+      border-radius: 3px;
+      background-color: white;
 
-    &:hover {
-      cursor: pointer;
-      text-decoration: underline;
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .toc {
+      &.is-sticky {
+        position: sticky;
+        top: 10px;
+      }
+
+      .toc-item {
+        padding: .6rem 0;
+        color: #424242;
+      }
+
+      .toc-item-child {
+        padding: 0 1.5rem .4rem;
+        color: #424242;
+      }
+
+      .toc-item a, .toc-item-child a {
+        color: var(--secondary-text-color);
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+
+      .toc-item a.active, .toc-item-child a.active {
+        color: var(--toc-highlight-text-color);
+      }
     }
   }
-
-  .toc-item a.active, .toc-item-child a.active {
-    color: var(--toc-highlight-text-color);
-  }
-
-  .toc-item-child {
-    padding: 0 30px 5px;
-    color: #424242;
-  }
-
-}
-
-.toc-sticky {
-  border-radius: 3px;
-  border-top: 5px solid var(--primary-color);
-  background-color: white;
-  position: sticky;
-  position: -webkit-sticky;
-  position: -moz-sticky;
-  position: -ms-sticky;
-  position: -o-sticky;
-  top: 10px;
-  padding: 10px 0;
 }
 
 footer {
@@ -159,20 +180,20 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  header {
+  header.main {
     padding: 10px 30px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
 
-  .logo {
-    font-size: 28px;
-    margin: 10px;
+    .logo {
+      font-size: 28px;
+      margin: 10px;
 
-    img {
-      width: 45px;
-      margin: 0 10px 0 0;
+      img {
+        width: 45px;
+        margin: 0 10px 0 0;
+      }
     }
   }
 
@@ -187,13 +208,19 @@ footer {
 
   main {
     padding: 30px;
+    flex-direction: column;
+
+    > aside {
+      width: 100%;
+      max-width: unset;
+    }
   }
 
   .content {
     padding: 0;
   }
 
-  .explore-more, .toc {
+  .explore-more, aside > .toc {
     display: none;
   }
 

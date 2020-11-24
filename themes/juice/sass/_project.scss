@@ -1,0 +1,58 @@
+.aside-section.project {
+  header {
+    display: flex;
+    align-items: baseline;
+
+    h2 {
+      flex: 2;
+
+      margin: 0;
+      font-size: 1.1rem;
+
+      a {
+        color: var(--secondary-text-color);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  ul.external-links {
+    display: block;
+
+    margin-top: 1rem;
+    margin-bottom: 0;
+
+    padding: .4rem 0 0;
+
+    border-top: solid 1px var(--primary-color);
+
+    list-style: none;
+
+    text-align: center;
+
+    li {
+      display: inline-block;
+      padding: 0 .6rem;
+
+      font-family: "Fira Sans", sans-serif;
+      font-size: .8rem;
+
+      a {
+        color: hsl(40, 13%, 23%);
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .toc {
+    .toc-item {
+      padding-bottom: 0;
+    }
+  }
+}

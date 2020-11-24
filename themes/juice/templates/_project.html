@@ -1,0 +1,41 @@
+{%  macro render_project(section, current_page=false) %}
+    {%  if not section.extra.no_project | default(value=false) and not current_page.extra.no_project | default(value=false)%}
+        <div class="project aside-section">
+            <header>
+                <h2><a href="{{ section.permalink }}">{{ section.title }}</a></h2>
+                {%  if section.extra.repo %}
+                    <a href="{{  section.extra.repo }}">
+                        {%  include "icons/github.svg.html" %}
+                    </a>
+                {% endif %}
+            </header>
+
+            <div class="toc">
+                {% for page in section.pages %}
+                    {% if page.extra.menu_title %}
+                        {%  set title = page.extra.menu_title %}
+                    {% else %}
+                        {% set title = page.title %}
+                    {% endif %}
+                    {%  if current_page and current_page.permalink %}
+                        {% set current_permalink = current_page.permalink | trim_end_matches(pat="/") %}
+                        {% set current_permalink = current_permalink ~ "/" %}
+                    {% else %}
+                        {% set current_permalink = false %}
+                    {% endif %}
+                    <div class="toc-item">
+                        <a href="{{ page.permalink }}" class="subtext{% if page.permalink == current_permalink %} active{% endif %}">{{  title | split(pat='|') | first }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            {% if section.extra.links %}
+                <ul class="external-links">
+                    {% for link in section.extra.links %}
+                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {%  endif %}
+        </div>
+    {%  endif %}
+{% endmacro %}

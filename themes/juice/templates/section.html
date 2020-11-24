@@ -1,0 +1,22 @@
+{% import "_macros.html" as macros %}
+{% import "_project.html" as project %}
+
+{% extends "index.html" %}
+
+{% block title %}{{ section.title }} | {{ super() }}{% endblock title %}
+
+{% block header %}
+    <header class="main box-shadow">
+        {{ macros::render_header() }}
+    </header>
+{% endblock header %}
+
+{% block above_toc %}
+    {{ project::render_project(section=section) }}
+{%  endblock %}
+
+{% block content %}
+    <div class="heading-text">{{ section.description }}</div>
+    {{ section.content | safe }}
+    <pre>{{  __tera_context }}</pre>
+{% endblock content %}
