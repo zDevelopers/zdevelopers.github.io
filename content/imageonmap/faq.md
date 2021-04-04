@@ -96,7 +96,7 @@ ImageOnMap is open to every player by default because we want the plugin to be u
 
 It looks like ImageOnMap index was somehow corrupted. This can happen when the server is badly stopped (e.g. killed). An example is below: the size on the splatter map and on the error message doesn't match.
 
-![Error message: “there is not enough space to place this map (8 × 8). Map title: “Map - Splatter Map - 6 × 6”.](https://user-images.githubusercontent.com/1417570/113507543-86b49700-954b-11eb-891a-7ea6a108b3d1.png)
+![Error message: “there is not enough space to place this map (8 × 8). Map title: “Map - Splatter Map - 6 × 6”.](imageonmap-corrupted-map-size.png)
 
 This seems to be a Bukkit bug we struggle to fix, but for you, the simplest fix is to render a huge map once (a map you won't use), and that rendering should repair ImageOnMap index. Run, as a player:
 
@@ -120,7 +120,7 @@ We (and a lot of other plugins) use this feature a lot. For advanced items manag
 
 That's why multiple plugins suddenly broke on April 2021. Reflection is widely used. That's not only ImageOnMap. Some popular plugins like WorldEdit or WorldGuard massively use reflection too. They are probably broken too.
 
-[Minehut announced this is fixed](https://canary.discord.com/channels/722918274962030602/726843731835224146/827998614084648960) so you may only have to reboot your server. If it's not working, they are working on a fork to fix that on their side.
+[Minehut announced this is fixed](https://forums.minehut.com/topic/36723-when-i-do-plugins-some-of-them-are-red-world-edit-image-on-map-world-guard-i-have-the-logs-if-anyone-knows-how-to-fix-it-pls-help/) so you may only have to reboot your server. If it's not working, they are working on a fork to fix that on their side.
 
 There is nothing we can do about that. To complain, please contact the Minehut staff. Feel free to link to this FAQ entry or to ask them to contact us directly.
 
