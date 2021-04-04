@@ -91,3 +91,39 @@ The next version will feature _dithering_, a technical process to optimise the c
 Yes, if your permissions plugin allows to negate permissions (all of them probably support that). To prevent players to create new images, negate the `imageonmap.new` permission. In most cases, give the `-imageonmap.new` permission to do that.
 
 ImageOnMap is open to every player by default because we want the plugin to be usable directly, even without a permissions plugin.
+
+# ImageOnMap say there is not enough place for a splatter map, but there is and the required size is not consistant
+
+It looks like ImageOnMap index was somehow corrupted. This can happen when the server is badly stopped (e.g. killed). An example is below: the size on the splatter map and on the error message doesn't match.
+
+![Error message: “there is not enough space to place this map (8 × 8). Map title: “Map - Splatter Map - 6 × 6”.](https://user-images.githubusercontent.com/1417570/113507543-86b49700-954b-11eb-891a-7ea6a108b3d1.png)
+
+This seems to be a Bukkit bug we struggle to fix, but for you, the simplest fix is to render a huge map once (a map you won't use), and that rendering should repair ImageOnMap index. Run, as a player:
+
+```
+/tomap https://dev.zcraft.fr/logo.png resize 50 50
+```
+
+and re-render the previously non-working map.
+
+# When I place an image, every other player in the area cannot see the bottom-left map.
+
+If other players leave the area then go back to it, they should see the whole image. Players must unload the area on their client, so they must go further than the server's rendering distance (usually, 300 blocks is enough).
+
+We hope to find a fix for this, but at least, it's only when the map is placed.
+
+# I'm using Minehut and ImageOnMap doesn't work.
+
+Minehut, a Minecraft server hosting plateform, disabled a fundamental component of Java programs (including plugins) called reflection. It's rather complicated, but for the idea it's what we use to hook into the Minecraft server itself and do advanced things Spigot/Paper does not allow us to do.
+
+We (and a lot of other plugins) use this feature a lot. For advanced items management (think about the special maps ImageOnMap gives), some GUIs (this sign GUI to rename a map), translations (so everyone can use IoM in its own language, even on the same server), etc. It would be a huge task (like really huge) to rewrite ImageOnMap without that.
+
+That's why multiple plugins suddenly broke on April 2021. Reflection is widely used. That's not only ImageOnMap. Some popular plugins like WorldEdit or WorldGuard massively use reflection too. They are probably broken too.
+
+[Minehut announced this is fixed](https://canary.discord.com/channels/722918274962030602/726843731835224146/827998614084648960) so you may only have to reboot your server. If it's not working, they are working on a fork to fix that on their side.
+
+There is nothing we can do about that. To complain, please contact the Minehut staff. Feel free to link to this FAQ entry or to ask them to contact us directly.
+
+# I'm using Minehut and ImageOnMap miss some features.
+
+It looks like Minehut use a fork of ImageOnMap, instead of the version we build. In their version, internationalization is disabled: you won't be able to use ImageOnMap in all languages supported; only English remain.
