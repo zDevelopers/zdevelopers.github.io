@@ -96,7 +96,7 @@ ImageOnMap is open to every player by default because we want the plugin to be u
 
 It looks like ImageOnMap index was somehow corrupted. This can happen when the server is badly stopped (e.g. killed). An example is below: the size on the splatter map and on the error message doesn't match.
 
-![Error message: “there is not enough space to place this map (8 × 8). Map title: “Map - Splatter Map - 6 × 6”.](imageonmap-corrupted-map-size.png)
+![Error message: “there is not enough space to place this map (8 × 8). Map title: “Map - Splatter Map - 6 × 6”.](./imageonmap-corrupted-map-size.png)
 
 This seems to be a Bukkit bug we struggle to fix, but for you, the simplest fix is to render a huge map once (a map you won't use), and that rendering should repair ImageOnMap index. Run, as a player:
 
