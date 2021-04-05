@@ -128,7 +128,7 @@ There is nothing we can do about that. To complain, please contact the Minehut s
 
 It looks like Minehut use a fork of ImageOnMap, instead of the version we build. In their version, internationalization is disabled: you won't be able to use ImageOnMap in all languages supported; only English remain.
 
-# I'm using PloudOS and the plugin don't work
+# I'm using PloudOS and the plugin doesn't work
 
 PloudOS in order to forbid shop plugins have blocked the usage of the http port. That means it's not possible to use /tomap <URL> or any command that as to search something on internet . There is nothing we can do on our side, they have told us that they plan on fixing someday this issue but they have no ETA.
   
