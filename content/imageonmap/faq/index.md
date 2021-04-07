@@ -116,11 +116,9 @@ We hope to find a fix for this, but at least, it's only when the map is placed.
 
 ## I'm using Minehut and ImageOnMap doesn't work.
 
-Minehut, a Minecraft server hosting plateform, disabled for security reasons a component called _JavaScript Engine_ around April 2nd, 2021. The translation system powering ImageOnMap use this engine to handle plurals, and with the engine unavailable, ImageOnMap was unable to run.
+Minehut, a Minecraft server hosting plateform, made some updates around April 2nd, 2021 breaking pluralization on ImageOnMap translation system. As a consequence, ImageOnMap was unable to run. Actually, all QuartzLib-based plugins are affected, as they share the same translation components.
 
-Actually, all QuartzLib-based plugins are affected.
-
-For ImageOnMap, Minehut disabled our translations system as a hotfix. We intend to fix this for everyone in an upcoming version (either 4.1 or 4.1.1).
+For ImageOnMap, Minehut disabled our translations system as a hotfix. We intend to fix this for everyone in an upcoming version (either 4.1 or 4.1.1), with degraded pluralization handling if the standard pluralization tools cannot be used.
 
 ## I'm using Minehut and ImageOnMap miss some features.
 
