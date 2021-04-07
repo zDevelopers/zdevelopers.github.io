@@ -112,23 +112,22 @@ If other players leave the area then go back to it, they should see the whole im
 
 We hope to find a fix for this, but at least, it's only when the map is placed.
 
-# I'm using Minehut and ImageOnMap doesn't work.
+# Host-specific questions
 
-Minehut, a Minecraft server hosting plateform, disabled a fundamental component of Java programs (including plugins) called reflection. It's rather complicated, but for the idea it's what we use to hook into the Minecraft server itself and do advanced things Spigot/Paper does not allow us to do.
+## I'm using Minehut and ImageOnMap doesn't work.
 
-We (and a lot of other plugins) use this feature a lot. For advanced items management (think about the special maps ImageOnMap gives), some GUIs (this sign GUI to rename a map), translations (so everyone can use IoM in its own language, even on the same server), etc. It would be a huge task (like really huge) to rewrite ImageOnMap without that.
+Minehut, a Minecraft server hosting plateform, disabled for security reasons a component called _JavaScript Engine_ around April 2nd, 2021. The translation system powering ImageOnMap use this engine to handle plurals, and with the engine unavailable, ImageOnMap was unable to run.
 
-That's why multiple plugins suddenly broke on April 2021. Reflection is widely used. That's not only ImageOnMap. Some popular plugins like WorldEdit or WorldGuard massively use reflection too. They are probably broken too.
+Actually, all QuartzLib-based plugins are affected.
 
-[Minehut announced this is fixed](https://forums.minehut.com/topic/36723-when-i-do-plugins-some-of-them-are-red-world-edit-image-on-map-world-guard-i-have-the-logs-if-anyone-knows-how-to-fix-it-pls-help/) so you may only have to reboot your server. If it's not working, they are working on a fork to fix that on their side.
+For ImageOnMap, Minehut disabled our translations system as a hotfix. We intend to fix this for everyone in an upcoming version (either 4.1 or 4.1.1).
 
-There is nothing we can do about that. To complain, please contact the Minehut staff. Feel free to link to this FAQ entry or to ask them to contact us directly.
-
-# I'm using Minehut and ImageOnMap miss some features.
+## I'm using Minehut and ImageOnMap miss some features.
 
 It looks like Minehut use a fork of ImageOnMap, instead of the version we build. In their version, internationalization is disabled: you won't be able to use ImageOnMap in all languages supported; only English remain.
 
-# I'm using PloudOS and the plugin doesn't work
+We intend to fix this for everyone in an upcoming version (either 4.1 or 4.1.1).
 
-PloudOS in order to forbid shop plugins have blocked the usage of the http port. That means it's not possible to use `/tomap <URL>` or any command that as to search something on internet . There is nothing we can do on our side, they have told us that they plan on fixing someday this issue but they have no ETA.
-  
+## I'm using PloudOS and the plugin doesn't work
+
+To block shop plugins, PloudOS, a Minecraft host, blocked Internet access for all plugins. That means any plugin that access the Internet won't work correctly—including the `/tomap` command, because it download images from… the Internet. There is nothing we can do on our side—they told us they intent to fix this someday but they have no ETA.
