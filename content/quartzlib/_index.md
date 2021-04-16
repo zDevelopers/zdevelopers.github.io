@@ -31,13 +31,13 @@ Currently, QuartzLib requires **Java 8** or later, **Bukkit 1.15** or later. Thi
         </repository>
     ```
 
-2. Add QuartzLib as a dependency.
-
+2. Add QuartzLib as a dependency. Be sure to use [the latest version](https://github.com/orgs/zDevelopers/packages?repo_name=QuartzLib).
+   
     ```xml
         <dependency>
             <groupId>fr.zcraft</groupId>
             <artifactId>quartzlib</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>0.0.4</version>
         </dependency>
     ```
 
@@ -61,7 +61,7 @@ Currently, QuartzLib requires **Java 8** or later, **Bukkit 1.15** or later. Thi
                         <relocations>
                             <relocation>
                                 <pattern>fr.zcraft.quartzlib</pattern>
-                                <shadedPattern>YOUR.OWN.PACKAGE</shadedPattern>
+                                <shadedPattern>YOUR.OWN.PACKAGE.quartzlib</shadedPattern>
                             </relocation>
                         </relocations>
                     </configuration>
