@@ -145,6 +145,8 @@ final Report report = new Report()
 The `selfRegister` thing registers the report into Hawk manager; this is required to enable auto-track and other
 features.
 
+## Configuring your report
+
 The whole API is chained: every method returns the current instance (with a few obvious exceptions like getters).
 You can [discover the methods available in the documentation](https://dev.zcraft.fr/docs/hawk/index.html?me/cassayre/florian/hawk/report/Report.html),
 but a typical use will be like this:
@@ -192,6 +194,63 @@ final Report report = new Report()
 ```
 
 All these options (including auto-track) can be changed at any time.
+
+[A lot of settings are available](https://dev.zcraft.fr/docs/hawk/index.html?me/cassayre/florian/hawk/report/ReportSettings.html)
+(under `.settings()`) to configure how the report webpage is displayed, including what section to display, what to
+display inside sections, etc. Here is a few important one but there are others only in the documentation above—check
+them out!
+
+### Generator
+
+You can also add a reference to your plugin or game that will be displayed on the
+report so players know what generated it. **It is actually recommended**, both for players and for us to know where Hawk is
+used. It's as simple as calling a method.
+
+```java
+report.settings()
+    .withGenerator("Your plugin or game", "https://link-to-your-plugin.com")
+    .done();
+```
+
+If your plugin does not have a public webpage (not even a Spigot one) or if you don't want to add it to the report, set
+the URL to `null`.
+
+### Statistics highlight
+
+If you know some statistics are more important than others to get what a player did at a glance, you can highlight some
+of them—everything else is still available under the “Show all” button.
+
+You only have to call a method under `.settings()` to indicate what statistics and blocs should be highlighted.
+
+```java
+report.setting()
+    .highlightingTheseStatistics(Arrays.asList(
+        Statistic.DAMAGE_DEALT,
+        Statistic.CRAFT_ITEM,
+        Statistic.ITEM_ENCHANTED,
+        Statistic.BREWINGSTAND_INTERACTION,
+        Statistic.SPRINT_ONE_CM
+    ))
+    .highlightingTheseMinedBlocks(Arrays.asList(
+        Material.DIAMOND, Material.DIAMOND_ORE,
+        Material.GOLD_INGOT, Material.GOLD_ORE,
+        Material.IRON_INGOT, Material.IRON_ORE,
+        Material.EMERALD, Material.EMERALD_ORE,
+        Material.OBSIDIAN, Material.NETHER_WART,
+        Material.SPAWNER, Material.STONE
+    ))
+    .done();
+
+// There are two more highlight options: 
+// - highlightingTheseUsedItems();
+// - highlightingThesePickedUpItems().
+```
+
+### Statistics whitelist
+
+You may want to only display some statistics, removing others totally. For that, call the
+`withTheseInGlobalStatisticsWhitelist()` [and similar](https://dev.zcraft.fr/docs/hawk/index.html?me/cassayre/florian/hawk/report/ReportSettings.html)
+methods from `.settings()`, like before with a list of statistics or blocks.
 
 ## Tracking and un-tracking players
 
