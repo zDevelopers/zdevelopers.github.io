@@ -6,7 +6,7 @@ insert_anchor_links = "right"
 [extra]
 repo = "https://github.com/zDevelopers/Hawk"
 links = [
-{ title = "Spigot", url = "https://www.spigotmc.org/resources/hawk.91426",
+{ title = "Spigot", url = "https://www.spigotmc.org/resources/hawk.91426" },
 { title = "Javadoc", url = "/docs/hawk/" }
 ]
 +++
