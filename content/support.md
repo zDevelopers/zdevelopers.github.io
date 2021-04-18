@@ -7,14 +7,18 @@ We provide free support for our plugins, libraries and tools, in French or Engli
 
 If we don't answer, please wait. Although we try to provide timely assistance, there is no guarantee. For reference, [we're on the French timezone](https://time.is/Paris).
 
-Before asking for support, **please try to solve the problem by yourself**, using the documentations and FAQs we offer. If you don't succeed, feel free to ask us your problem, but **ensure you're giving us enough information** to understand it. Things like:
+Before asking for support, **please try to solve the problem by yourself**, using the documentations and FAQs we offer. If you don't succeed, feel free to ask us your problem, but **ensure you're giving us enough information** to understand it. We **ask you** to provide as many information as possible from the following list, if appliquable:
 
+- Minecraft version (e.g. “1.16.5”);
+- server software used (Spigot? Paper? Purpur? Something else?);
+- if your server software is up-to-date;
+- plugin version (e.g. “ImageOnMap 4.1.2”);
 - precise error message;
 - exception stack trace, if any;
 - screenshot of the problem;
-- steps to reproduce;
+- steps to reproduce.
 
-will **greatly decrease** the typical answer time.
+Also, if you have anything else noticable, please share that too. It's never too much and it help a lot to understand what's happening.
 
 # I need help
 
