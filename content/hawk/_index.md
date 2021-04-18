@@ -40,8 +40,8 @@ Hawk generate reports with three main sections:
 - **Players and Statistics**, where global and per-player statistics are displayed, alongside specific infos for players
   like Hawk tags.
 
-The Hawk UI is translated in English and French. If you want to contribute with additional translations, please get in
-touch.
+The Hawk UI is translated in English and French, an an Italian translation was started (thanks zDragon_YT!). [If you want
+to contribute with additional translations, click this link!](https://poeditor.com/join/project?hash=0W06oCXfrR)
 
 A lot of things are configurable [if you integrate Hawk with your plugin](https://dev.zcraft.fr/docs/hawk/index.html?me/cassayre/florian/hawk/report/ReportSettings.html).
 As example, you can disable sections, configure what is displayed in each of them, highlight some statistics that are
