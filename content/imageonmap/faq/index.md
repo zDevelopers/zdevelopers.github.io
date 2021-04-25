@@ -126,6 +126,6 @@ It looks like Minehut use a fork of ImageOnMap, instead of the version we build.
 
 We intend to fix this for everyone in an upcoming version (either 4.1 or 4.1.1).
 
-## I'm using PloudOS and the plugin doesn't work
+## My link doesn't work on PloudOS.
 
-To block shop plugins, PloudOS, a Minecraft host, blocked Internet access for all plugins. That means any plugin that access the Internet won't work correctly—including the `/tomap` command, because it download images from… the Internet. There is nothing we can do on our side—they told us they intent to fix this someday but they have no ETA.
+You can only use imgur as an image hosting website due to security policy on PloudOS side. 
