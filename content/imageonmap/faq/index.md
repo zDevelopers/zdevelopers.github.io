@@ -128,4 +128,4 @@ We intend to fix this for everyone in an upcoming version (either 4.1 or 4.1.1).
 
 ## My link doesn't work on PloudOS.
 
-You can only use imgur as an image hosting website due to security policy on PloudOS side. 
+You can only use imgur, due to PloudOS' security policies
