@@ -112,6 +112,20 @@ If other players leave the area then go back to it, they should see the whole im
 
 We hope to find a fix for this, but at least, it's only when the map is placed.
 
+# Server software questions
+
+## What server software are supported?
+
+We support Spigot-based server software, i.e. Spigot, Paper, and their forks. We will make updates to support changes in these softwares.
+
+Other server software are not supported. Alternative Bukkit implementations may work if the implementation is correct, but there is no guarantee, and we won't update ImageOnMap to fix bugs on these as it would be too much work for us to handle. Also, as we hook with the native Minecraft server itself, alternative implementation without NMS accessible like Spigot-based servers probably won't work correctly.
+
+This being said, if you want to contribute to ImageOnMap to improve compatibility for a non-supported server software, we will happily accept your contributions.
+
+## Is Mohist (the Forge + Bukkit server software) supported?
+
+No, as it's an alternative Bukkit implementation (see above). Their implementation for maps handling is incomplete (as of May 2021), so ImageOnMap will probably not work on this platform. If you want to contribute to improve Mohist support, feel free. You can also ask Mohist developers to improve the maps APIs, or contribute yourself to Mohist.
+
 # Host-specific questions
 
 ## I'm using Minehut and ImageOnMap doesn't work.
