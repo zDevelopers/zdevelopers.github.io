@@ -114,11 +114,11 @@ We hope to find a fix for this, but at least, it's only when the map is placed.
 
 # Server software questions
 
-## What server software are supported?
+## What server softwares are supported?
 
-We support Spigot-based server software, i.e. Spigot, Paper, and their forks. We will make updates to support changes in these softwares.
+We support Spigot-based server softwares, i.e. Spigot, Paper, and their forks. We will make updates to support changes and fix bugs in these softwares.
 
-Other server software are not supported. Alternative Bukkit implementations may work if the implementation is correct, but there is no guarantee, and we won't update ImageOnMap to fix bugs on these as it would be too much work for us to handle. Also, as we hook with the native Minecraft server itself, alternative implementation without NMS accessible like Spigot-based servers probably won't work correctly.
+Other server softwares are not supported. Alternative Bukkit implementations may work if the implementation is correct, but there is no guarantee, and we won't update ImageOnMap to fix bugs on these as it would be too much work for us to handle. Also, as we hook with the native Minecraft server itself, alternative implementation without NMS accessible like Spigot-based servers probably won't work correctly.
 
 This being said, if you want to contribute to ImageOnMap to improve compatibility for a non-supported server software, we will happily accept your contributions.
 
