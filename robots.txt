@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://dev.zcraft.fr/sitemap.xml
